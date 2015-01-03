@@ -3,6 +3,7 @@
 from flask import Flask
 from flask import request
 from flask import jsonify
+from flask import render_template
 import os
 import random
 
@@ -28,7 +29,8 @@ def return_imgur_image():
     if request.method == 'POST':
         req = {'text': get_imgur_image()}
         return jsonify(**req)
-    return
+    elif request.method == 'GET':
+        return render_template('index.html')
 
 
 if __name__ == '__main__':
