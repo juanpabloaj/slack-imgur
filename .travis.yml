@@ -3,7 +3,9 @@ python:
 - '2.7'
 install:
 - pip install -r requirements-dev.txt
-script: nosetests
+script:
+- nosetests
+- flake8 $(find . -name '*.py')
 deploy:
   provider: heroku
   api_key:
