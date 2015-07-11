@@ -1,0 +1,13 @@
+language: python
+python:
+- '2.7'
+install:
+- pip install -r requirements-dev.txt
+script: nosetests
+deploy:
+  provider: heroku
+  api_key:
+    secure: V4y0Umy9S7RT8qwuwC3pzxFNOhlwy4nkfy0rfjyj0cIveYWJUidXwzXRYuP8zY/RTQi25XzNJfkPvecQKjuz826Dzw1oNhgT+L3j8+kv++y58xuO7ArTAZGOGlMqy76ZzuuQFWTvrD62+fS98oWGEoZPy4oZ7N5yoFbvqCl5rRE=
+  app: slack-imgur
+  on:
+    repo: juanpabloaj/slack-imgur
