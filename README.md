@@ -1,5 +1,6 @@
 # slack-imgur
 
+[![Build Status](https://travis-ci.org/juanpabloaj/slack-imgur.svg?branch=master)](https://travis-ci.org/juanpabloaj/slack-imgur)
 [![Code Climate](https://codeclimate.com/github/juanpabloaj/slack-imgur/badges/gpa.svg)](https://codeclimate.com/github/juanpabloaj/slack-imgur)
 
 Get a random image from Imgur in a Slack Channel, with Slack Outgoing WebHooks.
