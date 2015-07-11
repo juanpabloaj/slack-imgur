@@ -1,5 +1,7 @@
 # slack-imgur
 
+[![Code Climate](https://codeclimate.com/github/juanpabloaj/slack-imgur/badges/gpa.svg)](https://codeclimate.com/github/juanpabloaj/slack-imgur)
+
 Get a random image from Imgur in a Slack Channel, with Slack Outgoing WebHooks.
 
 ![gif](http://i.imgur.com/pUZq3U3.gif)
