@@ -14,9 +14,14 @@ from imgurpython.helpers.error import ImgurClientError
 app = Flask(__name__)
 
 
-def random_link_from_gallery_list(gallery_list):
-    random_gallery_index = random.randrange(len(gallery_list))
-    return gallery_list[random_gallery_index].link
+def random_link_from_gallery_list(gallery_list, client):
+    choice = random.choice(gallery_list)
+
+    if choice.is_album:
+        images = client.get_album_images(choice.id)
+        choice = random.choice(images)
+
+    return choice.link
 
 
 def get_imgur_image(text):
@@ -38,7 +43,7 @@ def get_imgur_image(text):
 
             gallery = client.gallery()
 
-        return random_link_from_gallery_list(gallery)
+        return random_link_from_gallery_list(gallery, client)
 
 
 @app.route('/', methods=['GET', 'POST'])
