@@ -25,6 +25,12 @@ Get a random image tagged with the tag called lolcat
 
     imgur lolcat
 
+## Run in your server
+
+Clone the repository and run gunicorn
+
+    gunicorn app:app --log-file=- --reload -b address:port
+
 [webhook]: https://getscreenshots.slack.com/services/new/outgoing-webhook
 [slack-imgur]: http://slack-imgur.herokuapp.com
 [imgur]: http://imgur.com/
